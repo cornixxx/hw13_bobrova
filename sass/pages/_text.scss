@@ -1,0 +1,29 @@
+.text {
+  background: #ffffff;
+}
+
+.text h2 {
+  margin-bottom: 25px;
+}
+
+.text p {
+  color: $dark-font-color;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+@include respond-to(medium-screens) {
+
+}
+
+@include respond-to(large-screens) {
+
+}
+
+@include respond-to(wide-screens) {
+  .text p {
+    font-size: 0.75em;
+    padding: 0 45px 0 2px;
+  }
+}
