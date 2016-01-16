@@ -1,0 +1,86 @@
+.f-page {
+  background: $dark-font-color;
+  color: $super-light-font;
+  padding: 25px 0;
+}
+
+.f-page .info {
+  color: #969696;
+  font-weight: 300;
+  line-height: 1.4;
+  margin-bottom: 30px;
+}
+
+.f-page p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+
+  span {
+    display: block;
+  }
+}
+
+.f-page .social {
+  margin-bottom: 20px;
+}
+
+@include respond-to(medium-screens) {
+  .f-page {
+    padding: 35px 0;
+  }
+
+  .f-page .info {
+    width: 50%;
+    float: left;
+    padding-right: 35px;
+  }
+
+  .f-page p {
+    font-size: 0.9em;
+  }
+}
+
+@include respond-to(large-screens) {
+  .f-page {
+    padding: 45px 0;
+  }
+
+  .f-page .info {
+    width: 50%;
+    float: left;
+    padding-right: 35px;
+  }
+
+  .f-page p {
+    font-size: 0.75em;
+    float: left;
+  }
+
+  .f-page .social {
+    float: left;
+    margin: 0 92px 0 108px;
+  }
+}
+
+@include respond-to(wide-screens) {
+  .f-page {
+    padding: 52px 0;
+  }
+
+  .f-page .info {
+    font-size: 0.75em;
+    width: 50%;
+    float: left;
+    padding-right: 35px;
+  }
+
+  .f-page p {
+    font-size: 0.75em;
+    float: left;
+  }
+
+  .f-page .social {
+    float: left;
+    margin: 0 92px 0 108px;
+  }
+}

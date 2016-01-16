@@ -1,0 +1,82 @@
+.details {
+  color: $color-font;
+  font-size: 1.1em;
+  font-style: italic;
+
+  &::after {
+    content: '\e801';
+    font-family: fontello;
+    font-style: normal;
+    margin-left: 5px;
+  }
+}
+
+.button {
+  display: block;
+  width: 81px;
+  text-align: center;
+  font-size: 1.2em;
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(171, 133, 0, 0.75);
+  padding: 4px 0;
+  background: $main-link-color;
+  box-shadow: 0 2px 0 #ab8500;
+  border-radius: 3px;
+
+  &:hover {
+    color: #ffffff;
+    background: #ab8500;
+    box-shadow: 0 2px 0 $main-link-color;
+  }
+}
+
+.video-links {
+  display: block;
+  font-size: 0.75em;
+  line-height: 1.1;
+  color: $super-light-font;
+
+  &::before {
+    content: '\e801';
+    font-family: fontello;
+    font-size: 1.9em;
+    color: $main-link-color;
+    margin-right: 13px;
+    position: relative;
+    top: 3px;
+  }
+
+  &:hover {
+    color: $main-link-color;
+  }
+}
+
+@include respond-to(medium-screens) {
+  .details {
+    font-size: 1em;
+  }
+
+  .button {
+    font-size: 1em;
+  }
+}
+
+@include respond-to(large-screens) {
+  .details {
+    font-size: 0.75em;
+  }
+
+  .button {
+    font-size: 1em;
+  }
+}
+
+@include respond-to(wide-screens) {
+  .details {
+    font-size: 0.75em;
+  }
+
+  .button {
+    font-size: 1em;
+  }
+}

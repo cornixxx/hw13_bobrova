@@ -1,0 +1,30 @@
+.video {
+  background: url(../img/video-bg.jpg) no-repeat top center;
+  background-size: cover;
+  position: relative;
+  color: $super-light-font;
+}
+
+.video-links-block h3 {
+  font-size: 1.5em;
+  font-weight: 100;
+  margin-bottom: 7px;
+}
+
+@include respond-to(medium-screens) {
+
+}
+
+@include respond-to(large-screens) {
+  .video-links-block div {
+    width: 50%;
+    float: left;
+  }
+}
+
+@include respond-to(wide-screens) {
+  .video-links-block div {
+    width: 50%;
+    float: left;
+  }
+}
