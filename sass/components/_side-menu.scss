@@ -1,0 +1,76 @@
+.side-menu {
+  clear: both;
+}
+
+.side-menu li {
+  background: $main-link-color;
+  border-bottom: 1px solid $super-light-font;
+  padding: 20px 0 20px 30px;
+
+  a {
+    color: $super-light-font;
+    font-size: 1.2em;
+    font-weight: 900;
+
+    &:hover {
+      color: #ffea00;
+    }
+  }
+}
+
+.side-menu .sub-catalog li {
+  border-bottom: none;
+  padding: 0;
+
+  a {
+    color: #ffde6c;
+    font-size: 1.1em;
+    font-weight: 400;
+
+    &:hover {
+      color: $super-light-font;
+    }
+  }
+}
+
+@include respond-to(medium-screens) {
+  .side-menu {
+    width: 190px;
+  }
+
+  .side-menu li a {
+    font-size: 1em;
+  }
+
+  .side-menu .sub-catalog li a {
+    font-size: 0.85em;
+  }
+}
+
+@include respond-to(large-screens) {
+  .side-menu {
+    width: 200px;
+  }
+
+  .side-menu li a {
+    font-size: 0.875em;
+  }
+
+  .side-menu .sub-catalog li a {
+    font-size: 0.75em;
+  }
+}
+
+@include respond-to(wide-screens) {
+  .side-menu {
+    width: 225px;
+  }
+
+  .side-menu li a {
+    font-size: 0.875em;
+  }
+
+  .side-menu .sub-catalog li a {
+    font-size: 0.75em;
+  }
+}
