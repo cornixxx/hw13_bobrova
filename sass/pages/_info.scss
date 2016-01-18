@@ -54,6 +54,34 @@
   }
 }
 
+.product-rate dd  {
+  span{
+    float: left;
+    margin-right: 5px;
+  }
+
+  ul {
+    margin: 0;
+  }
+
+  li {
+    float: left;
+    margin-right: 0;
+
+    &::before {
+      font-size: 15px;
+      color: $main-link-color;
+      margin: 1px;
+    }
+
+    &:last-child::before{
+      color: #ebebeb;
+    }
+  }
+}
+
+
+
 .product-rate .button {
   width: 163px;
   padding: 8px 0;
@@ -82,6 +110,10 @@
     font-weight: 300;
     line-height: 1.5;
   }
+}
+
+.product-info .details::after {
+  content: '\e807';
 }
 
 .looked {
@@ -117,10 +149,15 @@
   }
 }
 
+.product-rate .social-likes {
+  margin-top: 20px;
+}
+
+
 @include respond-to(medium-screens) {
   .product-description img {
     float: left;
-    margin: 3px 55px 0 0;
+    margin: 3px 25px 0 0;
   }
 
   .product-rate {
@@ -164,6 +201,10 @@
     .price {
       font-size: 1.1em;
     }
+  }
+
+  .product-rate .social-likes {
+    margin-top: 40px;
   }
 }
 
@@ -215,6 +256,10 @@
       font-size: 1em;
     }
   }
+
+  .product-rate .social-likes {
+    margin-top: 125px;
+  }
 }
 
 @include respond-to(wide-screens) {
@@ -264,5 +309,9 @@
     .price {
       font-size: 1em;
     }
+  }
+
+  .product-rate .social-likes {
+    margin-top: 135px;
   }
 }

@@ -55,7 +55,7 @@
   }
 }
 
-.icon-facebook-1 {
+.icon-facebook {
   background: #39579a;
 
   &:hover {
@@ -126,5 +126,110 @@
   &:hover {
     border: 2px solid #dbdbdb;
     background: #ffffff;
+  }
+}
+
+.social-likes div {
+  float: left;
+  margin-right: 20px;
+}
+
+.social-likes a {
+  float: left;
+  border-radius: 3px;
+  font-size: 12px;
+  padding: 2px 5px 2px 0;
+  margin: 0 7px 7px 0;
+}
+
+.vk-likes {
+  background: #5f83aa;
+  color: $super-light-font;
+
+  &::before {
+    content: 'B';
+    font-size: 14px;
+    font-weight: 700;
+    border-right: 1px solid #ffffff;
+    padding: 0 5px;
+    margin-right: 5px;
+  }
+
+  &:hover {
+    color: $super-light-font;
+    background: rgba(#5f83aa, 0.8 );
+  }
+}
+
+.fb-likes {
+  background: #3d57a2;
+  color: $super-light-font;
+  font-weight: 700;
+
+  &::before {
+    content: '\e809';
+    font-family: fontello;
+    font-size: 13px;
+    padding: 0 5px;
+    font-weight: 900;
+  }
+
+  &:hover {
+    color: $super-light-font;
+    background: rgba(#3d57a2, 0.8 );
+  }
+}
+
+.tw-likes {
+  background: -webkit-linear-gradient(to top left, #ccc, #FFFFFF);
+  background: -o-linear-gradient(to top left, #ccc, #FFFFFF);
+  background: -moz-linear-gradient(to top left, #ccc, #FFFFFF);
+  background: linear-gradient(to top left, #ccc, #FFFFFF);
+  color: $dark-font-color;
+  border: 1px solid #ccc;
+
+  &::before {
+    content: '\e800';
+    font-family: fontello;
+    color: #00acee;
+    font-size: 13px;
+    padding: 0 4px;
+  }
+
+  &:hover {
+    background: -webkit-linear-gradient(to top left, #898f9c, #FFFFFF);
+    background: -o-linear-gradient(to top left, #898f9c, #FFFFFF);
+    background: -moz-linear-gradient(to top left, #898f9c, #FFFFFF);
+    background: linear-gradient(to top left, #898f9c, #FFFFFF);
+    color: $dark-font-color;
+  }
+}
+
+.likes {
+  float: right;
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  border: 1px solid $light-font-color;
+  border-radius: 3px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -9px;
+    top: 4px;
+    border: 4px solid transparent;
+    border-right: 4px solid $light-font-color;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 4px;
+    border: 4px solid transparent;
+    border-right: 4px solid #ffffff;
   }
 }
