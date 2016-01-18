@@ -8,22 +8,61 @@
 
 .text p {
   color: $dark-font-color;
-  font-size: 12px;
+  font-size: 1em;
   font-weight: 300;
   line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+video {
+  margin: 0 auto;
+  width: 100%;
 }
 
 @include respond-to(medium-screens) {
+  .text {
+    padding: 20px 0 30px;
+  }
+  .text p {
+    font-size: 0.95em;
+    padding: 0 25px 0 2px;
+  }
 
+  video{
+    width: 460px;
+    height: 340px;
+    margin: 45px auto;
+  }
 }
 
 @include respond-to(large-screens) {
+  .text {
+    padding: 20px 0 30px;
+  }
+  .text p {
+    font-size: 0.75em;
+    padding: 0 35px 0 2px;
+  }
 
+  video{
+    width: 460px;
+    height: 340px;
+    margin: 45px auto;
+  }
 }
 
 @include respond-to(wide-screens) {
+  .text {
+    padding: 30px 0 50px;
+  }
   .text p {
     font-size: 0.75em;
     padding: 0 45px 0 2px;
+  }
+
+  video{
+    width: 460px;
+    height: 340px;
+    margin: 45px auto;
   }
 }
