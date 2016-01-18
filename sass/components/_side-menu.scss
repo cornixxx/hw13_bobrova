@@ -36,6 +36,7 @@
 @include respond-to(medium-screens) {
   .side-menu {
     width: 190px;
+    float: left;
   }
 
   .side-menu li a {
@@ -50,6 +51,7 @@
 @include respond-to(large-screens) {
   .side-menu {
     width: 200px;
+    float: left;
   }
 
   .side-menu li a {
@@ -63,7 +65,8 @@
 
 @include respond-to(wide-screens) {
   .side-menu {
-    width: 225px;
+    width: 226px;
+    float: left;
   }
 
   .side-menu li a {
