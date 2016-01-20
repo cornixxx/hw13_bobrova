@@ -3,6 +3,33 @@
   background-size: cover;
   position: relative;
   color: $super-light-font;
+  padding: 25px 0;
+}
+
+.video-block {
+  margin: 20px 0 30px;
+
+  video {
+    border: 5px solid #FFFFFF;
+  }
+
+  .large-video {
+    width: 100%;
+  }
+
+  .video-mini {
+    margin: 0 auto;
+
+    video {
+      width: 49%;
+      float: left;
+      margin: 0 2% 5px 0;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+  }
 }
 
 .video-links-block h3 {
@@ -12,10 +39,52 @@
 }
 
 @include respond-to(medium-screens) {
+  .video {
+    padding: 30px 0 35px;
+  }
 
+  .video-block {
+
+    .large-video {
+      width: 49%;
+      margin-right: 1%;
+      float: left;
+    }
+
+    .video-mini {
+      width: 50%;
+      float: right;
+
+      video {
+        width: 48%;
+        float: left;
+        margin: 0 1% 5px 0;
+      }
+    }
+  }
 }
 
 @include respond-to(large-screens) {
+  .video-block {
+
+    .large-video {
+      width: 49%;
+      margin-right: 1%;
+      float: left;
+    }
+
+    .video-mini {
+      width: 50%;
+      float: right;
+
+      video {
+        width: 48%;
+        float: left;
+        margin: 0 1% 5px 0;
+      }
+    }
+  }
+
   .video-links-block div {
     width: 50%;
     float: left;
@@ -23,6 +92,30 @@
 }
 
 @include respond-to(wide-screens) {
+  .video {
+    padding: 50px 0 55px;
+  }
+
+  .video-block {
+
+    .large-video {
+      width: 49%;
+      margin-right: 1%;
+      float: left;
+    }
+
+    .video-mini {
+      width: 50%;
+      float: right;
+
+      video {
+        width: 48%;
+        float: left;
+        margin: 0 1% 5px 0;
+      }
+    }
+  }
+
   .video-links-block div {
     width: 50%;
     float: left;

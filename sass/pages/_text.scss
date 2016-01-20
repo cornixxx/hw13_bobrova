@@ -14,9 +14,10 @@
   margin-bottom: 20px;
 }
 
-video {
-  margin: 0 auto;
-  width: 100%;
+.text video {
+  display: block;
+  margin: 25px auto;
+  width: 85%;
 }
 
 @include respond-to(medium-screens) {
@@ -28,10 +29,9 @@ video {
     padding: 0 25px 0 2px;
   }
 
-  video{
-    width: 460px;
-    height: 340px;
-    margin: 45px auto;
+  .text video{
+    width: 70%;
+    margin: 35px auto;
   }
 }
 
@@ -44,10 +44,9 @@ video {
     padding: 0 35px 0 2px;
   }
 
-  video{
-    width: 460px;
-    height: 340px;
-    margin: 45px auto;
+  .text video{
+    width: 55%;
+    margin: 40px auto;
   }
 }
 
@@ -60,9 +59,8 @@ video {
     padding: 0 45px 0 2px;
   }
 
-  video{
-    width: 460px;
-    height: 340px;
+  .text video{
+    width: 47%;
     margin: 45px auto;
   }
 }
