@@ -1,13 +1,281 @@
+.h-page {
+  background: #221b13 url(../img/header.jpg) no-repeat top center;
+  padding: 17px 0 0;
+}
+
+form {
+  float: left;
+}
+
+.search-container {
+  position: relative;
+
+  &::after {
+    content: '\e802';
+    font-family: fontello;
+    position: absolute;
+    right: 10px;
+    top: 3px;
+    color: rgba($super-light-font, 0.25);
+    font-size: 16px;
+  }
+
+  input[type="search"] {
+    background: rgba(#685f53, 0.25);
+    border: none;
+    border-radius: 3px;
+    padding: 6px 30px 6px 12px;
+    position: relative;
+    color: $super-light-font;
+    width: 200px;
+    display: block;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-input-placeholder {
+      color: rgba($super-light-font, 0.25);
+      font-size: 1em;
+    }
+
+    &::-moz-placeholder {
+      color: rgba($super-light-font, 0.25);
+      font-size: 1em;
+    }
+
+    &:-moz-placeholder {
+      color: rgba($super-light-font, 0.25);
+      font-size: 1em;
+    }
+
+    &:-ms-input-placeholder {
+      color: rgba($super-light-font, 0.25);
+      font-size: 1em;
+    }
+
+    &:focus::-webkit-input-placeholder {
+      color: transparent
+    }
+
+    &:focus::-moz-placeholder {
+      color: transparent
+    }
+
+    &:focus:-moz-placeholder {
+      color: transparent
+    }
+
+    &:focus:-ms-input-placeholder {
+      color: transparent
+    }
+  }
+}
+
+.h-page  .navbar-nav {
+
+  li{
+    margin-bottom: 15px;
+
+    a {
+      font-size: 1.2em;
+      color: $super-light-font;
+      padding: 0;
+
+      &:hover {
+        color: $main-link-color;
+        background: none;
+      }
+    }
+  }
+}
+
+.h-page  .navbar-nav .sub-menu {
+  display: none;
+
+  padding: 20px 0;
+
+  li{
+    float: left;
+    width: 50%;
+    white-space: nowrap;
+    text-overfolow: ellipsis;
+    overflow: hidden;
+
+    a {
+      display: block;
+      font-size: 1em;
+      line-height: 2;
+      padding-right: 10px;
+    }
+  }
+}
+
+.h-page .navbar-toggle{
+  margin: 0;
+
+ .icon-bar {
+    background: rgba($super-light-font, 0.25);
+  }
+}
+
+.recomend-link {
+  position: relative;
+
+  &:hover {
+
+    .sub-menu{
+      display: block;
+    }
+  }
+}
+
+.icon-basket {
+  float: right;
+
+  &::before {
+    font-size: 27px;
+    color: rgba($super-light-font, 0.25)
+  }
+
+  &:hover::before {
+    color: $main-link-color;
+  }
+}
 
 @include respond-to(medium-screens) {
+  .navbar {
+    float: right;
+  }
 
+  .h-page .navbar {
+    margin-bottom: 0;
+    min-height: 0;
+
+    margin: 5px 15px 0 0;
+    li {
+      margin-right: 17px;
+
+      a {
+        font-size: 0.9em;
+      }
+    }
+  }
+
+  .h-page  .navbar-nav .sub-menu {
+    position: absolute;
+    left: -70px;
+    z-index: 9;
+    min-width: 420px;
+    padding: 20px 0 20px 5px;
+    background: rgba(black, 0.65);
+
+    li {
+      margin: 0;
+
+      a {
+        font-size: 0.8em;
+      }
+    }
+  }
+
+  .search-container input[type="search"] {
+    width: 250px;
+  }
+
+  .icon-basket {
+    margin-right: 0;
+  }
 }
 
 @include respond-to(large-screens) {
+  .navbar {
+    float: right;
+  }
 
+  .h-page .navbar {
+    margin-bottom: 0;
+    min-height: 0;
+    margin: 5px 15px 0 0;
+
+    li {
+      margin-right: 17px;
+
+      a {
+        font-size: 1em;
+      }
+    }
+  }
+
+  .h-page  .navbar-nav .sub-menu {
+    position: absolute;
+    left: -80px;
+    z-index: 9;
+    min-width: 500px;
+    padding: 20px 0 20px 10px;
+    background: rgba(black, 0.65);
+
+    li {
+      margin: 0;
+
+      a {
+        font-size: 0.75em;
+      }
+    }
+  }
+
+  .search-container input[type="search"] {
+    width: 320px;
+  }
+
+  .icon-basket {
+    margin-right: 55px;
+  }
 }
 
 @include respond-to(wide-screens) {
+  .h-page .navbar {
+    margin-bottom: 0;
+    min-height: 0;
+    float: right;
+    margin: 5px 15px 0 0;
 
+    li {
+      margin-right: 17px;
 
+      a {
+        font-size: 1em;
+      }
+    }
+  }
+
+  .h-page  .navbar-nav .sub-menu {
+    position: absolute;
+    left: -90px;
+    z-index: 9;
+    min-width: 590px;
+    padding: 20px 0 20px 10px;
+    background: rgba(black, 0.65);
+
+    li {
+      margin: 0;
+
+      a {
+        font-size: 0.75em;
+      }
+    }
+  }
+
+  .search-container::after {
+    right: 20px;
+    top: 5px;
+  }
+
+  .search-container input[type="search"] {
+    width: 335px;
+  }
+
+  .icon-basket {
+    margin-right: 55px;
+  }
 }
