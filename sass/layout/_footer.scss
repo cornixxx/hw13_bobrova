@@ -2,6 +2,7 @@
   background: $dark-font-color;
   color: $super-light-font;
   padding: 25px 0;
+  text-align: center;
 }
 
 .f-page .info {
@@ -9,6 +10,7 @@
   font-weight: 300;
   line-height: 1.4;
   margin-bottom: 30px;
+  text-align: left;
 }
 
 .f-page p {
@@ -21,7 +23,7 @@
 }
 
 .f-page .social {
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
 }
 
 @include respond-to(medium-screens) {
@@ -65,6 +67,10 @@
 @include respond-to(wide-screens) {
   .f-page {
     padding: 35px 0;
+  }
+
+  .f-page.home-footer {
+    padding: 50px 0;
   }
 
   .f-page .info {
