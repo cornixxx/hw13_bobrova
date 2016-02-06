@@ -33,8 +33,23 @@
   padding-right: 20px;
   margin-bottom: 25px;
 
-  img {
+  a {
+    display: block;
+    max-width: 190px;
+    max-height: 200px;
     margin-bottom: 15px;
+    position: relative;
+
+    &:hover::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba($main-link-color, 0.4);
+    }
   }
 
   p {
@@ -52,8 +67,8 @@
   }
 
   .button {
-    float: left;
-    margin-left: 25px;
+    float: right;
+    margin-right: 10px;
   }
 }
 
@@ -72,7 +87,7 @@
 
 
     .catalog-product {
-      padding-right: 55px;
+      padding-right: 75px;
       margin-bottom: 60px;
 
       p {
@@ -137,6 +152,10 @@
 
 @include respond-to(wide-screens) {
 
+  .catalog-main {
+    padding: 45px 0 0;
+  }
+
   .catalog-main h2 {
     margin: 20px 110px 35px 25px;
   }
@@ -167,7 +186,7 @@
       width: 33.33%;
       float: left;
       padding-right: 25px;
-      margin-bottom: 60px;
+      margin-bottom: 45px;
 
       p {
         font-size: 0.875em;

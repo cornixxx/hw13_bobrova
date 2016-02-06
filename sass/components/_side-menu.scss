@@ -2,9 +2,9 @@
   clear: both;
 }
 
-.side-menu li {
+.side-menu dt {
   background: $main-link-color;
-  border-bottom: 1px solid $super-light-font;
+  border-top: 1px solid $super-light-font;
   padding: 20px 0 20px 30px;
 
   a {
@@ -18,17 +18,23 @@
   }
 }
 
-.side-menu .sub-catalog li {
-  border-bottom: none;
-  padding: 0;
+.side-menu .sub-catalog{
+  background: $main-link-color;
+  padding-bottom: 15px;
+  margin: 0;
+  li {
+    border-bottom: none;
+    padding: 0;
 
-  a {
-    color: #ffde6c;
-    font-size: 1.1em;
-    font-weight: 400;
+    a {
+      color: #ffde6c;
+      font-size: 1.1em;
+      font-weight: 400;
+      padding-left: 30px;
 
-    &:hover {
-      color: $super-light-font;
+      &:hover {
+        color: $super-light-font;
+      }
     }
   }
 }
@@ -39,7 +45,7 @@
     float: left;
   }
 
-  .side-menu li a {
+  .side-menu dt a {
     font-size: 1em;
   }
 
@@ -54,7 +60,7 @@
     float: left;
   }
 
-  .side-menu li a {
+  .side-menu dt a {
     font-size: 0.875em;
   }
 
@@ -69,7 +75,7 @@
     float: left;
   }
 
-  .side-menu li a {
+  .side-menu dt a {
     font-size: 0.875em;
   }
 

@@ -1,6 +1,4 @@
-/**
- * Created by nasty on 01.01.2016.
- */
+
 
 // Can also be used with $(document).ready()
 $(window).load(function() {
@@ -8,6 +6,35 @@ $(window).load(function() {
         animation: "slide"
     });
 });
+
+/* Accordion */
+
+function openFirstPanel(){
+    $('.accordion > dt:first-child').next().addClass('active').slideDown(500);
+}
+
+(function($) {
+
+    var allPanels = $('.accordion > dd').hide();
+
+    openFirstPanel();
+
+    $('.accordion > dt > a').click(function() {
+        $this = $(this);
+        $target =  $this.parent().next();
+
+
+        if($target.hasClass('active')){
+            $target.removeClass('active').slideUp(500);
+        }else{
+            allPanels.removeClass('active').slideUp(500);
+            $target.addClass('active').slideDown(500);
+        }
+
+        return false;
+    });
+
+})(jQuery);
 
 
 

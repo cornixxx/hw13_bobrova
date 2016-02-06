@@ -13,59 +13,9 @@
 <body>
 
 <div class="wrapper">
-    <header class="h-page">
-        <div class="container-fluid clearfix">
 
-            <form action="#">
-                <div class="search-container">
-                    <input  type="search" placeholder="Поиск"/>
-                    <button type="submit"> </button>
-                </div>
-            </form>
+    <? include('includes/header.php');?>
 
-            <a class="icon-basket" href="#"> </a>
-            <nav class="navbar">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li> <a href="index.html#news"> Новости </a></li>
-                        <li class="recomend-link">
-                            <a href="catalog.html"> Рекомендую </a>
-                            <ul class="sub-menu clearfix">
-                                <li> <a href="info.html"> Кондиционер </a> </li>
-                                <li><a href="info.html"> Солярис для лица c витамином "А" </a></li>
-                                <li><a href="info.html"> Бальзам для век</a></li>
-                                <li><a href="info.html"> Ночной крем </a></li>
-                                <li><a href="info.html"> Динамический увлажняющий крем </a></li>
-                                <li> <a href="info.html"> Водные компрессы Мёртвого Моря </a> </li>
-                                <li><a href="info.html"> Лосьон для тела "Солярис" </a></li>
-                                <li><a href="info.html"> Квартет солей Мертвого моря </a></li>
-                                <li><a href="info.html"> Очищающее молочко для лица </a></li>
-                                <li><a href="info.html"> Шампунь против перхоти </a></li>
-                                <li> <a href="info.html"> Комплект пробников кремов </a> </li>
-                                <li><a href="info.html"> Шампунь для повседневного пользования  </a></li>
-                                <li><a href="info.html"> Грязевая маска для лица </a></li>
-                                <li><a href="info.html"> Тонизирующий лосьон для тела </a></li>
-                                <li><a href="info.html"> Крем для рук и ногтей </a></li>
-                                <li><a href="info.html"> Зубная паста "Шинсин" </a></li>
-                            </ul>
-                        </li>
-                        <li><a href="text.html"> Приглашаю </a></li>
-                        <li><a href="#"> Акции </a></li>
-                        <li><a href="#"> Контакты </a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
 
     <main class="m-page">
 
@@ -99,34 +49,21 @@
             <div class="container-fluid">
                 <h2> Новости </h2>
                 <div class="news-block clearfix">
-                    <article class="clearfix">
-                        <img src="img/news1.jpg" alt=""/>
-                        <div class="news-inner">
-                            <p> Доктор Нонна на телеканале "Домашний" в программе "Спросите Повара" </p>
-                            <a class="details" href="#"> Подробнее </a>
-                        </div>
-                    </article>
-                    <article class="clearfix">
-                        <img src="img/news2.jpg" alt=""/>
-                        <div class="news-inner">
-                            <p> Доктор Нонна на НТВ в программе "Наши со Львом Новоженовым" </p>
-                            <a class="details" href="#"> Подробнее </a>
-                        </div>
-                    </article>
-                    <article class="clearfix">
-                        <img src="img/news3.jpg" alt=""/>
-                        <div class="news-inner">
-                            <p> Доктор Нонна на телеканале "Домашний" в программе "Спросите Повара" </p>
-                            <a class="details" href="#"> Подробнее </a>
-                        </div>
-                    </article>
-                    <article class="clearfix">
-                        <img src="img/news4.jpg" alt=""/>
-                        <div class="news-inner">
-                            <p> Доктор Нонна на НТВ в программе "Наши со Львом Новоженовым" </p>
-                            <a class="details" href="#"> Подробнее </a>
-                        </div>
-                    </article>
+
+                    <?php
+                    include('includes/arrays.php');
+
+                    foreach ($newsItems as $item) {
+                        echo '<article class="clearfix">';
+                        echo "<img src=".$item['src']." alt=".$item['alt']."/>";
+                        echo "<div class=\"news-inner\">";
+                        echo '<p>'.$item['descript'].'</p>';
+                        echo "</div>";
+                        echo "<a class=\"details\" href=".$item['url']."> Подробнее </a>";
+                        echo '</article>';
+                    }
+                    ?>
+
                 </div>
             </div>
         </section>
@@ -156,36 +93,19 @@
                     <a class="button" href="#"> Купить </a>
                 </article>
                 <div class="products-block clearfix">
-                    <article>
-                        <img src="img/product2.jpg" alt=""/>
-                        <h3> Шампунь ежедневного пользования </h3>
-                        <span class="price"> 280 грн. </span>
-                    </article>
-                    <article>
-                        <img src="img/product3.jpg" alt=""/>
-                        <h3> Шампунь ежедневного пользования </h3>
-                        <span class="price"> 280 грн. </span>
-                    </article>
-                    <article>
-                        <img src="img/product4.jpg" alt=""/>
-                        <h3> Шампунь ежедневного пользования </h3>
-                        <span class="price"> 280 грн. </span>
-                    </article>
-                    <article>
-                        <img src="img/product2.jpg" alt=""/>
-                        <h3> Шампунь ежедневного пользования </h3>
-                        <span class="price"> 280 грн. </span>
-                    </article>
-                    <article>
-                        <img src="img/product3.jpg" alt=""/>
-                        <h3> Шампунь ежедневного пользования </h3>
-                        <span class="price"> 280 грн. </span>
-                    </article>
-                    <article>
-                        <img src="img/product4.jpg" alt=""/>
-                        <h3> Шампунь ежедневного пользования </h3>
-                        <span class="price"> 280 грн. </span>
-                    </article>
+
+                    <?php
+                    include('includes/arrays.php');
+
+                    foreach ($recomendItems as $item) {
+                        echo '<article>';
+                        echo "<a href=".$item['url']."><img src=".$item['src']." alt=".$item['alt']."/></a>";
+                        echo '<h3>'.$item['name'].'</h3>';
+                        echo "<span class=\"price\">" .$item['price']. "</span>";
+                        echo '</article>';
+                    }
+                    ?>
+
                 </div>
             </div>
         </section>
@@ -280,54 +200,24 @@
         <section class="partners">
             <div class="container-fluid clearfix">
                 <h2> Мои партнеры по бизнесу </h2>
-                <div class="partner">
-                    <img src="img/partner1.jpg" alt=""/>
-                    <h3> Диорнева Татьяна </h3>
-                    <span> Директор </span>
-                    <span class="icon-location"> Мариуполь </span>
-                    <div class="social-mini clearfix">
+
+                <?php
+                include('includes/arrays.php');
+
+                foreach ($partnersItems as $item) {
+                    echo '<div class="partner">';
+                    echo "<img src=".$item['src']." alt=".$item['alt']."/>";
+                    echo '<h3>'.$item['name'].'</h3><span>'.$item['position'].'</span><span class="icon-location">'.$item['loc'].'</span>';
+                    echo '<div class="social-mini clearfix">
                         <a class="vk" href="#"> </a>
                         <a class="icon-odnoklassniki" href="#"> </a>
                         <a class="icon-facebook" href="#"> </a>
                         <a class="icon-twitter" href="#"> </a>
-                    </div>
-                </div>
-                <div class="partner">
-                    <img src="img/partner2.jpg" alt=""/>
-                    <h3> Проценко Мария </h3>
-                    <span> Директор </span>
-                    <span class="icon-location"> Донецк </span>
-                    <div class="social-mini clearfix">
-                        <a class="vk" href="#"> </a>
-                        <a class="icon-odnoklassniki" href="#"> </a>
-                        <a class="icon-facebook" href="#"> </a>
-                        <a class="icon-twitter" href="#"> </a>
-                    </div>
-                </div>
-                <div class="partner">
-                    <img src="img/partner1.jpg" alt=""/>
-                    <h3> Диорнева Татьяна </h3>
-                    <span> Директор </span>
-                    <span class="icon-location"> Мариуполь </span>
-                    <div class="social-mini clearfix">
-                        <a class="vk" href="#"> </a>
-                        <a class="icon-odnoklassniki" href="#"> </a>
-                        <a class="icon-facebook" href="#"> </a>
-                        <a class="icon-twitter" href="#"> </a>
-                    </div>
-                </div>
-                <div class="partner">
-                    <img src="img/partner2.jpg" alt=""/>
-                    <h3> Проценко Мария </h3>
-                    <span> Директор </span>
-                    <span class="icon-location"> Донецк </span>
-                    <div class="social-mini clearfix">
-                        <a class="vk" href="#"> </a>
-                        <a class="icon-odnoklassniki" href="#"> </a>
-                        <a class="icon-facebook" href="#"> </a>
-                        <a class="icon-twitter" href="#"> </a>
-                    </div>
-                </div>
+                    </div>';
+                    echo '</div>';
+                }
+                ?>
+
             </div>
         </section>
 
@@ -374,16 +264,8 @@
             voluptate. Architecto assumenda deserunt dignissimos libero molestiae nisi officiis
             pariatur qui. Animi, commodi inventore.
         </p>
-        <p> Сайт независимого консультанта компании </p>
-        <div class="social clearfix">
-            <a class="icon-youtube" href="#"> </a>
-            <a class="circles" href="#"> </a>
-            <a class="vk" href="#"> </a>
-            <a class="icon-odnoklassniki" href="#"> </a>
-            <a class="icon-facebook" href="#"> </a>
-            <a class="icon-twitter" href="#"> </a>
-        </div>
-        <p> Разработка сайта <span> студия www </span> </p>
+
+        <? include('includes/footer.php');?>
     </div>
 </footer>
 

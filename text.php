@@ -12,59 +12,7 @@
 <body>
 <div class="wrapper">
 
-    <header class="h-page">
-        <div class="container-fluid clearfix">
-
-            <form action="#">
-                <div class="search-container">
-                    <input  type="search" placeholder="Поиск"/>
-                    <button type="submit"> </button>
-                </div>
-            </form>
-
-            <a class="icon-basket" href="#"> </a>
-            <nav class="navbar">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li> <a href="index.html#news"> Новости </a></li>
-                        <li class="recomend-link">
-                            <a href="catalog.html"> Рекомендую </a>
-                            <ul class="sub-menu clearfix">
-                                <li> <a href="info.html"> Кондиционер </a> </li>
-                                <li><a href="info.html"> Солярис для лица c витамином "А" </a></li>
-                                <li><a href="info.html"> Бальзам для век</a></li>
-                                <li><a href="info.html"> Ночной крем </a></li>
-                                <li><a href="info.html"> Динамический увлажняющий крем </a></li>
-                                <li> <a href="info.html"> Водные компрессы Мёртвого Моря </a> </li>
-                                <li><a href="info.html"> Лосьон для тела "Солярис" </a></li>
-                                <li><a href="info.html"> Квартет солей Мертвого моря </a></li>
-                                <li><a href="info.html"> Очищающее молочко для лица </a></li>
-                                <li><a href="info.html"> Шампунь против перхоти </a></li>
-                                <li> <a href="info.html"> Комплект пробников кремов </a> </li>
-                                <li><a href="info.html"> Шампунь для повседневного пользования  </a></li>
-                                <li><a href="info.html"> Грязевая маска для лица </a></li>
-                                <li><a href="info.html"> Тонизирующий лосьон для тела </a></li>
-                                <li><a href="info.html"> Крем для рук и ногтей </a></li>
-                                <li><a href="info.html"> Зубная паста "Шинсин" </a></li>
-                            </ul>
-                        </li>
-                        <li><a href="text.html"> Приглашаю </a></li>
-                        <li><a href="#"> Акции </a></li>
-                        <li><a href="#"> Контакты </a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <? include('includes/header.php');?>
 
     <main class="m-page">
         <section class="text">
@@ -113,16 +61,7 @@
 
 <footer class="f-page">
     <div class="container">
-        <p> Сайт независимого консультанта компании </p>
-        <div class="social clearfix">
-            <a class="icon-youtube" href="#"> </a>
-            <a class="circles" href="#"> </a>
-            <a class="vk" href="#"> </a>
-            <a class="icon-odnoklassniki" href="#"> </a>
-            <a class="icon-facebook" href="#"> </a>
-            <a class="icon-twitter" href="#"> </a>
-        </div>
-        <p> Разработка сайта <span> студия www </span> </p>
+        <? include('includes/footer.php');?>
     </div>
 </footer>
 
