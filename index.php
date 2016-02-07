@@ -72,18 +72,23 @@
 
         <!-- recomended -->
 
-        <section class="recomended">
+        <section class="recomended" id="recomend">
             <div class="container-fluid clearfix">
                 <h2> Я рекомендую </h2>
+
                 <nav>
-                    <ul class="clearfix">
-                        <li><a href="#"> Соли и грязи  </a></li>
-                        <li><a href="#"> Кремы и лосьены </a></li>
-                        <li><a href="#"> Парфюмерия </a></li>
-                        <li><a href="#"> Витамины и бады </a></li>
-                        <li><a href="#"> Чаи </a></li>
-                    </ul>
+                    <?php
+                    include('includes/arrays.php');
+                    echo '<ul class="clearfix">';
+                    foreach ($recomendNav as $item) {
+
+                        echo "<li><a href=" . $item['url'] . ">" . $item['title'] . "</a></li>";
+                    }
+                    echo '</ul>';
+
+                    ?>
                 </nav>
+
                 <article class="large">
                     <img src="img/product1.jpg" alt=""/>
                     <h3> Шампунь ежедневного пользования</h3>
@@ -223,7 +228,7 @@
 
         <!-- email -->
 
-        <section class="email">
+        <section class="email" id="email">
             <div class="container-fluid">
                 <h2> Добро пожаловать в команду </h2>
                 <form action="#" class="clearfix">
@@ -240,7 +245,7 @@
 
 <!-- footer-->
 
-<footer class="f-page home-footer">
+<footer class="f-page home-footer" id="footer">
     <div class="container-fluid">
         <p class="info"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto corporis eum
             possimus quibusdam, quod recusandae tempore voluptate. Architecto assumenda

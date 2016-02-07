@@ -3,8 +3,8 @@
 /*main-nav*/
 
 $navItems = array(
-    ['title' =>'Новости', 'url' => 'index.php'],
-    ['title' =>'Рекомендую', 'url' => 'catalog.php','children' => array(
+    ['title' =>'Новости', 'url' => 'index.php#news'],
+    ['title' =>'Рекомендую', 'url' => 'index.php#recomend','children' => array(
         ['title' =>'Кондиционер', 'url' => 'info.php'],
         ['title' =>'Солярис для лица c витамином', 'url' => 'info.php'],
         ['title' =>'Бальзам для век', 'url' => 'info.php'],
@@ -22,9 +22,9 @@ $navItems = array(
         ['title' =>'Крем для рук и ногтей', 'url' => 'info.php'],
         ['title' =>'Зубная паста /"Шинсин/"', 'url' => 'info.php'],
     )],
-    ['title' =>'Приглашаю', 'url' => 'index.php'],
-    ['title' =>'Акции', 'url' => 'catalog.php'],
-    ['title' =>'Контакты', 'url' => 'catalog.php'],
+    ['title' =>'Приглашаю', 'url' => 'index.php#email'],
+    ['title' =>'Акции', 'url' => 'text.php'],
+    ['title' =>'Контакты', 'url' => 'index.php#footer'],
 );
 
 /* sidebar*/
@@ -92,6 +92,13 @@ $recomendItems = array(
     ['src' =>'img/product4.jpg', 'url' => 'info.php', 'price'=>'280 грн', 'name'=>'Шампунь ежедневного пользования', 'alt'=>'#'],
 );
 
+$recomendNav = array(
+    ['title' =>'Соли и грязи ', 'url' => 'catalog.php'],
+    ['title' =>'Кремы и лосьены', 'url' => 'catalog.php'],
+    ['title' =>'Парфюмерия', 'url' => 'catalog.php'],
+    ['title' =>'Витамины и бады', 'url' => 'catalog.php'],
+    ['title' =>'Чаи', 'url' => 'catalog.php'],
+);
 
 
 ?>
